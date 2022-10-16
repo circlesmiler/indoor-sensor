@@ -1,0 +1,8 @@
+# Libraries
+lib/*
+
+# Target Platform for Paricle Photon OS
+target/*
+
+# File Types
+*.cpp
