@@ -24,7 +24,7 @@ STARTUP(WiFi.selectAntenna(ANT_AUTO));
 void setup()
 {
   Serial.begin(9600);
-  while (!Serial.available() && millis() < 30000)
+  while (!Serial.available() && millis() < 5000)
   {
     Serial.println("Press any key to start.");
     Particle.process();
@@ -57,10 +57,12 @@ void updateLED()
   if (humidity > humidityThreshold)
   {
     digitalWrite(LED, HIGH); // sets the LED on
+    // digitalWrite(LED2, HIGH); // sets the LED on
   }
   else
   {
     digitalWrite(LED, LOW); // sets the LED off
+    // digitalWrite(LED2, LOW); // sets the LED off
   }
 }
 
